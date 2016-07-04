@@ -93,9 +93,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onConvertToPercentage(sender: AnyObject) {
-        let toPercentage = Double(runningNumber)! / 100
-        runningNumber = "\(toPercentage)"
-        updateLabel()
+        let val = outputLbl.text
+        let toPercentage = abs(Double(val!)!) / 100
+        leftValStr = "\(toPercentage)"
+        outputLbl.text = leftValStr
     }
     
     
